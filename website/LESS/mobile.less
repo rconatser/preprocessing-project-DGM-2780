@@ -1,0 +1,337 @@
+
+* html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* Start your code here: */
+/*----------Universal Styles------------*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: @title;
+}
+
+a,
+p,
+ul li,
+ol li {
+	font-family: @main;
+}
+
+.inline-flex-settings { // mixin
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-settings { // mixin
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay-mixin {
+	background-color: rgba(0,0,0,.5);
+	width: 100%;
+	margin: 0;
+	height: 500px;
+	
+	& h1 {
+		padding-top: 100px;	
+	}
+}
+/*---------------------------------*/
+/*----------Button Styles-----------*/
+.custom-button { //mixin
+	background-color: black;
+	border-color: black;
+	border-radius: 0;
+	transition: 0.3s;
+	padding: 10px 20px;
+
+	&:hover {
+		background-color: @orange; // bright orange
+		border-color: @orange;
+		transition: 0.3;
+	}
+
+	& a {
+		color: white;
+		text-decoration: none;
+		letter-spacing: 1.7px;
+		font-weight: 800;
+		font-size: 14px;
+		text-transform: uppercase;
+	}
+}
+
+p.btn {
+	.custom-button();
+}
+
+/*-----------End Button Styles-----------*/
+/*--------Start NavBar Styles-----------*/
+nav {
+	background: transparent;
+	position: absolute;
+	border-top: 1px solid white;
+	padding: 0;
+	margin: 0 auto;
+	width: 100%;
+	top: 458px;
+}
+
+nav,
+nav li {
+	.inline-flex-settings(); // mixin
+}
+
+nav li {
+	padding: 10px 30px;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+
+	&:hover, &.active {
+		background-color: black;
+	}
+
+	& a {
+		color: white !important;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+/*--------End NavBar Styles--------------*/
+/*-------Start Section Styles------------*/
+div.section {
+	padding: 40px 0;
+	width: 100%;
+
+	& img {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+div.section .text,
+div.section.text {
+	width: 80%;
+}
+
+.row {
+	margin: 0;
+}
+
+.padding-0 {
+	padding: 0;
+}
+
+span.underline {
+	content: '';
+	border-bottom: 1px #aaa solid;
+	width: 100%;
+}
+
+/*-------End Section Styles------------*/
+footer {
+	text-align: center;
+	padding: 20px 0 8px;
+}
+
+/*-------Start Hero Styles--------------*/
+.hero {
+	background-position: top;
+	background-attachment: fixed;
+	padding-bottom: 100px;
+	.flex-settings(); //mixin
+	height: 500px;
+	background-repeat: no-repeat;
+
+	& h1 {
+		color: white;
+	}
+	
+	.overlay {
+		.overlay-mixin();
+	}
+}
+
+.hero-biker {
+	background-image: url('../images/biker-mountain.jpeg');
+	.hero(); // mixin
+}
+
+.hero-contact {
+	background-image: url('../images/bike-trail.jpeg');
+	.hero(); // mixin
+	background-position: bottom;
+}
+
+/*---- Edits for underlined header ----*/
+body main p:before,
+body main ul:before {
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 1px;
+	border-top: 1px solid black;
+}
+
+body main p.btn:before {
+	border: 0px !important;
+}

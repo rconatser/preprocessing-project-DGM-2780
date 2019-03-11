@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Open+Sans:300');
-/*------ Colors ------*/
-/*-------- Fonts ---------*/
-/*------ Escape Variables ------*/
 * html,
 body,
 div,
@@ -153,59 +150,17 @@ ul li,
 ol li {
   font-family: 'Open Sans', sans-serif;
 }
-.inline-flex-settings {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.flex-settings {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.overlay-mixin {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  margin: 0;
-  height: 500px;
-}
-.overlay-mixin h1 {
-  padding-top: 100px;
-}
 /*---------------------------------*/
 /*----------Button Styles-----------*/
-.custom-button {
-  background-color: black;
-  border-color: black;
-  border-radius: 0;
-  transition: 0.3s;
-  padding: 10px 20px;
-}
-.custom-button:hover {
-  background-color: #de6433;
-  border-color: #de6433;
-  transition: 0.3;
-}
-.custom-button a {
-  color: white;
-  text-decoration: none;
-  letter-spacing: 1.7px;
-  font-weight: 800;
-  font-size: 14px;
-  text-transform: uppercase;
-}
 p.btn {
   background-color: black;
   border-color: black;
   border-radius: 0;
   transition: 0.3s;
-  padding: 10px 20px;
 }
 p.btn:hover {
-  background-color: #de6433;
-  border-color: #de6433;
+  background-color: #DE6433;
+  border-color: #DE6433;
   transition: 0.3;
 }
 p.btn a {
@@ -232,7 +187,7 @@ nav li {
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 nav li {
   padding: 10px 30px;
@@ -285,77 +240,20 @@ footer {
   padding: 20px 0 8px;
 }
 /*-------Start Hero Styles--------------*/
-.hero {
-  background-position: top;
-  background-attachment: fixed;
-  padding-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  background-repeat: no-repeat;
-}
-.hero h1 {
-  color: white;
-}
-.hero .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  margin: 0;
-  height: 500px;
-}
-.hero .overlay h1 {
-  padding-top: 100px;
-}
-.hero-biker {
+div.hero {
   background-image: url('../images/biker-mountain.jpeg');
   background-position: top;
   background-attachment: fixed;
   padding-bottom: 100px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 500px;
   background-repeat: no-repeat;
 }
-.hero-biker h1 {
+div.hero h1 {
   color: white;
-}
-.hero-biker .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  margin: 0;
-  height: 500px;
-}
-.hero-biker .overlay h1 {
-  padding-top: 100px;
-}
-.hero-contact {
-  background-image: url('../images/bike-trail.jpeg');
-  background-position: top;
-  background-attachment: fixed;
-  padding-bottom: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-.hero-contact h1 {
-  color: white;
-}
-.hero-contact .overlay {
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  margin: 0;
-  height: 500px;
-}
-.hero-contact .overlay h1 {
-  padding-top: 100px;
 }
 /*---- Edits for underlined header ----*/
 body main p:before,
@@ -369,59 +267,3 @@ body main ul:before {
 body main p.btn:before {
   border: 0px !important;
 }
-/*--------targets tablet screens and up--------------*/
-@media (min-width: 768px) {
-  nav {
-    top: 458px;
-    width: 100%;
-  }
-  .flex-right {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-  }
-  /*-- Testimonials --*/
-  .testimonials {
-    background-color: #010506;
-    padding: 0;
-    margin: 0;
-    padding-bottom: 40px;
-  }
-  .testimonials .text {
-    background-color: white;
-    padding: 0;
-    margin: 0;
-    margin-left: -20px;
-  }
-  .testimonials .text p {
-    width: 80%;
-    padding: 40px 0;
-    margin: 0 10%;
-  }
-  .testimonials .text h2 {
-    width: 80%;
-    margin: 20px 10% -30px;
-  }
-  .testimonials .text p.btn {
-    background-color: black;
-    border-color: black;
-    border-radius: 0;
-    transition: 0.3s;
-    padding: 10px 20px;
-    width: auto;
-  }
-  .testimonials .text p.btn:hover {
-    background-color: #de6433;
-    border-color: #de6433;
-    transition: 0.3;
-  }
-  .testimonials .text p.btn a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 1.7px;
-    font-weight: 800;
-    font-size: 14px;
-    text-transform: uppercase;
-  }
-}
-/*--------targets desktop screens and up--------------*/

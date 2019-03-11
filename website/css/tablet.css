@@ -1,0 +1,34 @@
+/*--------targets tablet screens and up--------------*/
+@media only screen and (min-width: 768px) {
+  nav {
+    top: 458px;
+    width: 100%;
+  }
+  .flex-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  /*-- Testimonials --*/
+  .testimonials {
+    background-color: #010506;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+  .testimonials .text {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    margin-left: -20px;
+  }
+  .testimonials .text p {
+    width: 80%;
+    padding: 40px 0;
+    margin: 0 10%;
+  }
+  .testimonials .text h2 {
+    width: 80%;
+    margin: 20px 10% -30px;
+  }
+}
